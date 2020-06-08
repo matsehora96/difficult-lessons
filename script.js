@@ -17,13 +17,14 @@ switch (lang) {
 }
 //c
 let arr = {
-    ru: ['Понедельник, Вторник, Среда, Четверг, Пятница, Суббота, Воскресенье'],
-    en: ['Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday']
+    'ru': ['Понедельник, Вторник, Среда, Четверг, Пятница, Суббота, Воскресенье'],
+    'en': ['Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday']
 }
-console.log(arr.ru);
+let keysObj = Object.keys(arr);
+(lang == keysObj[0]) ? console.log(arr.ru) : console.log(arr.en);
 
 //Second task
-let namePerson = 'Коля';
-let result = (namePerson == 'Артём') ? console.log('Директор') : 
+let namePerson = 'Миша';
+(namePerson == 'Артём') ? console.log('Директор') : 
     (namePerson == 'Максим') ? console.log('Преподаватель') : 
     console.log('Студент');
