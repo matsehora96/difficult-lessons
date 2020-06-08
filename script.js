@@ -1,18 +1,29 @@
 //First task
-let num = 266219;
+let lang = 'ru';
+//a
+if (lang == 'ru') {
+    console.log('Понедельник, Вторник, Среда, Четверг, Пятница, Суббота, Воскресенье');
+} else if (lang == 'en') {
+    console.log('Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday');
+}
+//b
+switch (lang) {
+    case 'ru': 
+        console.log('Понедельник, Вторник, Среда, Четверг, Пятница, Суббота, Воскресенье');
+        break;
+    case 'en':
+        console.log('Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday');
+        break;
+}
+//c
+let arr = {
+    ru: ['Понедельник, Вторник, Среда, Четверг, Пятница, Суббота, Воскресенье'],
+    en: ['Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday']
+}
+console.log(arr.ru);
 
 //Second task
-let arr = String(num).split('');
-let result = 1;
-for (let i = 0; i < arr.length; i++){
-    result *= arr[i];
-}
-console.log(result);
-
-//third task
-let numCube = result ** 3
-console.log(numCube);
-
-//fourth task
-let secondArr = String(numCube).split('');
-alert(secondArr[0] + secondArr[1]);
+let namePerson = 'Коля';
+let result = (namePerson == 'Артём') ? console.log('Директор') : 
+    (namePerson == 'Максим') ? console.log('Преподаватель') : 
+    console.log('Студент');
